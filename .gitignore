@@ -1,0 +1,4 @@
+# Ignore files for vscode compatibility
+.vscode
+jsconfig.json
+NetscriptDefinitions.d.ts
