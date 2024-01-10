@@ -16,7 +16,7 @@ export async function main(ns) {
     }
   }
 
-  serverList.forEach((server) => {
+  serverList.forEach(server => {
     if (!ns.hasRootAccess(server)) {
       tryHack(server);
     } else {
@@ -27,7 +27,7 @@ export async function main(ns) {
       }
 
       subServerList.forEach(subServer => {
-        tryHack(subServer)
+        tryHack(subServer);
       })
     }
   })
