@@ -4,14 +4,15 @@ export async function main(ns) {
 
   const tryHack = (server) => {
     try {
-      if (fileExists("BruteSSH.exe", "home")) {
+      if (ns.fileExists("BruteSSH.exe", "home")) {
         ns.brutessh(server);
       }
       ns.nuke(server);
 
       ns.tprint(`${server} hacked successfully!`);
     } catch (e) {
-      ns.tprint(e);
+      ns.tprint('Unsuccessful!');
+      ns.tprint(e.message);
     }
   }
 
