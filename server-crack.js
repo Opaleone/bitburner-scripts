@@ -2,7 +2,7 @@
 export async function main(ns) {  
   const serverList = ns.scan(ns.getHostname());
 
-  const tryHack = (server) => {
+  const tryHack = server => {
     try {
       if (ns.fileExists("BruteSSH.exe", "home")) {
         ns.brutessh(server);
@@ -26,7 +26,7 @@ export async function main(ns) {
         subServerList.splice(0, 1);
       }
 
-      subServerList.forEach((subServer) => {
+      subServerList.forEach(subServer => {
         tryHack(subServer)
       })
     }

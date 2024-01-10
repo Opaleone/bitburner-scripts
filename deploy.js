@@ -9,7 +9,7 @@ export async function main(ns) {
 
       if (subServerList.includes('home')) subServerList.splice(0, 1);
 
-      subServerList.forEach((subServer) => {
+      subServerList.forEach(subServer => {
         if (!ns.fileExists('hack.js', subServer)) {
           ns.scp("hack.js", subServer, "home");
         }
