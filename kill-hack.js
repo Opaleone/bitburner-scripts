@@ -1,8 +1,10 @@
+import { recursiveScan } from "recursiveScan";
+
 /** @param {NS} ns */
 export async function main(ns) {
-  const serverList = ns.scan(ns.getHostname());
+  const serverList = recursiveScan(ns, ns.getHostname());
 
-  serverList.forEach((server) => {
+  serverList.forEach(server => {
     ns.killall(server, true);
   })
 }

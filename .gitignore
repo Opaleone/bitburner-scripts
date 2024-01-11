@@ -2,3 +2,4 @@
 .vscode
 jsconfig.json
 NetscriptDefinitions.d.ts
+contracts/
