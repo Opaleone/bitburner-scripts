@@ -1,6 +1,6 @@
 /** @param {NS} ns */
 
-export function recursiveScan (ns, root, found = []) {
+export function recursiveScan(ns, root, found = []) {
   if (!found.includes(root)) {
     found.push(root);
     for (const server of ns.scan(root)) {
